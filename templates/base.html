@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/ultron.png">
+        {% if title %}
+        <title>{{ title }} - MyWeb</title>
+        {% else %}
+        <title>Welcome to MyWeb</title>
+        {% endif %}
+    </head>
+    <body>
+        <img src="static/sun.gif" alt="Описание" class="sun">
+        <div class = headsun>
+            MyWeb:
+            <a href="{{ url_for('profPage') }}">Home</a>
+            {% if current_user.is_anonymous %}
+            <a href="{{ url_for('startPage') }}">Login</a>
+            {% else %}
+            <a href="{{ url_for('editProfile') }}">Edit Profile</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+            {% endif %}
+        </div>
+        {% block content %}{% endblock %}
+    </body>
+</html>

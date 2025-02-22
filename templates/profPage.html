@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="rectangle">
+        <div class="nazvanie">Hello, {{ current_user.username }}</div>
+        <div class="kartochka">
+            <img src="static/profilePictures/{{ current_user.profile_pic }}" alt="Описание" class="prof">
+            <div class="opisanie">
+                {{ current_user.about_me }}
+            </div>
+        </div>
+        <img src="static/itmo.png" alt="Описание" class="logo">
+        <div class="circle top"></div>
+        <div class="circle right"></div>
+        <div class="circle bottom"></div>
+        <div class="circle left"></div>
+    </div>
+{% endblock %}

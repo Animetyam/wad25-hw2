@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="forms">
+        <h1>Edit Profile</h1>
+        <p style="font-weight: bold;">Hello, {{current_user.username}} <br> Change the fields you want or leave them as they are</p>
+        <form action="" method="post" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.password.label }}<br>
+                {{ form.password(size=32) }}<br>
+                {% for error in form.password.errors %}
+                <span style="color: white;;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.password2.label }}<br>
+                {{ form.password2(size=32) }}<br>
+                {% for error in form.password2.errors %}
+                <span style="color: white;;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.about_me.label }}<br>
+                {{ form.about_me(cols=50, rows=4) }}<br>
+                {% for error in form.about_me.errors %}
+                <span style="color: white;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.image.label }}<br>
+                {{ form.image() }}<br>
+                {% for error in form.image.errors %}
+                    <span style="color: white;">{{ error }}</span>
+                {% endfor %}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+    </div>
+{% endblock %}

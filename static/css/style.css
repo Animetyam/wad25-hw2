@@ -1,0 +1,126 @@
+body {
+    background-image: url(background.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rectangle {
+    margin-top: 10%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(228, 224, 224);
+    position: relative;
+    width: 700px; 
+    height: 310px;
+    background-color: rgba(61, 92, 98, 0.38); 
+    border-radius: 20px; 
+}
+
+.circle {
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(228, 224, 224);
+    position: absolute;
+    width: 20px; 
+    height: 20px; 
+    background-color: rgb(228, 224, 224); 
+    border-radius: 50%;
+}
+.top {
+    top: -18px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+.right {
+    right: -18px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+
+.bottom {
+    bottom: -18px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+.left {
+    left: -18px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+
+.kartochka{
+    color: white;
+    text-align: center;
+    display: flex;
+    
+}
+
+.prof{
+    margin-left: 40px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(228, 224, 224);
+    width: 160px; 
+    height: 160px; 
+    border-radius: 50%; 
+}
+
+.logo{
+    margin-left: 600px; 
+    font-size: large;
+    width: 90px;
+    height: 90px;
+    
+}
+
+.nazvanie{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(228, 224, 224);
+}
+
+.opisanie{
+    font-size: 25px;
+    text-align: left;
+    margin-top: 25px;
+    margin-left: 110px;
+}
+
+.sun{
+    position: absolute; 
+    width: 200px;
+    top: 0; 
+    left: 0
+}
+
+
+.headsun{
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    padding-top: 20px;
+    text-align: center;
+    font: bold;
+    font-size: 40px;
+    color: white;
+    padding-right: 20px; 
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border-bottom: solid 5px;
+    border-left: solid 5px;
+    border-color: rgb(228, 224, 224);
+}
+
+.forms{
+    margin-top: 150px;
+}
+
+a {
+    color: white;
+  }
